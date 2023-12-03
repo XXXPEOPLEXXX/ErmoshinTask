@@ -1,0 +1,37 @@
+﻿<Page x:Class="TaskManager.PagesProget.AutoPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:TaskManager.PagesProget"
+      mc:Ignorable="d"
+      d:DesignHeight="300"
+      d:DesignWidth="270"
+      Title="AutoPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="23*" />
+            <RowDefinition Height="241*" />
+        </Grid.RowDefinitions>
+        <StackPanel>
+            <TextBlock Text="Авторизация"
+                       FontSize="15" />
+        </StackPanel>
+        <StackPanel Grid.Row="1"
+                    Grid.Column="0">
+            
+            <TextBlock Text="Логин"
+                       FontSize="15" />
+            <TextBox x:Name="LoginAuth" Text="{Binding Login}" />
+            <TextBlock Text="Пароль"
+                       FontSize="15" />
+            <TextBox x:Name="PasswordAuth" Text="{Binding Password}" />
+            <Button x:Name="btnAuth"
+                    Content="Авторизоваться"
+                    Click="btnAuth_Click" />
+            <Button x:Name="btnRegistration"
+                    Content="Регистрация" />
+        </StackPanel>
+    </Grid>
+</Page>
